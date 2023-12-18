@@ -11,10 +11,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the web app code into the container
-COPY app.py .
+COPY app.js .
 
 # Expose the port the web app will listen on
 EXPOSE 5000
 
 # Run the web app using the Flask development server
-CMD ["python", "app.py"]
+CMD ["javascript", "app.js"]
